@@ -1,0 +1,2 @@
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
+function sendForm(e){e.preventDefault();document.getElementById('message').textContent='Thanks! Your inquiry has been received. We will get back to you shortly.';e.target.reset();return false;}
